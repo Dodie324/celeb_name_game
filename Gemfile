@@ -12,6 +12,7 @@ gem 'imdb', '~> 0.8'
 gem 'json_pure'
 gem 'google-search'
 gem 'wikipedia-client'
+gem 'responders'
 
 group :development, :test do
   gem 'pry-rails'

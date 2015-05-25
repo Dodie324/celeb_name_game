@@ -1,5 +1,6 @@
 class MoviesController < ApplicationController
   require 'wikipedia'
+  respond_to :json, :html
 
   def index
     @image_results = []
@@ -17,7 +18,10 @@ class MoviesController < ApplicationController
         end
       end
 
-      @image_results
+      respond_to do |format|
+        format.html { render :index }
+        format.json { render json: { movie: @movie, actors: @random_actors, image: @image_results } }
+      end
     end
   end
 end

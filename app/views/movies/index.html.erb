@@ -1,4 +1,4 @@
-<%= form_tag movies_path, method: :get do %>
+<%= form_tag movies_path, method: :get, id: "submitForm" do %>
   <p>
     <%= text_field_tag(
       :title,
@@ -10,10 +10,4 @@
   </p>
 <% end %>
 
-<% if @movie %>
-  <%= @movie.title %></br>
-  <%= @random_actors.join(", ") %>
-  <% @image_results.shuffle.each do |image| %>
-    <%= image_tag "#{image}", height: "200px", width: "200px" %>
-  <% end %>
-<% end %>
+<div id="movieData"></div>
