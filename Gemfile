@@ -11,6 +11,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'imdb', '~> 0.8'
 gem 'json_pure'
 gem 'google-search'
+gem 'wikipedia-client'
 
 group :development, :test do
   gem 'pry-rails'
